@@ -32,8 +32,7 @@ class _BirthdaysListViewState extends State<BirthdaysListView> {
       ScrollOffsetListener.create();
 
   void scrollToCurrentMonth() {
-    int currentMonthIndex = 10;
-    // DateTime.now().month - 1;
+    int currentMonthIndex = DateTime.now().month - 1;
 
     if (itemScrollController.isAttached) {
       itemScrollController.scrollTo(
