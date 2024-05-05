@@ -1,0 +1,32 @@
+name: birthdays
+description: "View all birthdays for the current year."
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: '>=3.2.6 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter  
+  sqflite: ^2.0.2+1
+  path: 1.8.3
+  scrollable_positioned_list: ^0.3.8
+  intl: ^0.18.1
+
+dev_dependencies:
+  flutter_launcher_icons: "^0.13.1"
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter_launcher_icons:
+  android: true
+  image_path: "assets/ic_launcher.png"
+  adaptive_icon_background: "assets/ic_launcher_adaptive_back.png"
+  adaptive_icon_foreground: "assets/ic_launcher_adaptive_fore.png"
+  min_sdk_android: 21
+
+flutter:
+  uses-material-design: true
+
