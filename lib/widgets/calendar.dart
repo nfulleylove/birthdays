@@ -63,9 +63,10 @@ class CalendarWidget extends StatelessWidget {
         formatButtonVisible: false,
         leftChevronVisible: false,
         rightChevronVisible: false,
-        headerPadding: EdgeInsets.symmetric(
-          vertical: isLandscape ? 0 : 8.0,
-          horizontal: 16.0,
+        headerPadding: EdgeInsets.only(
+          top: isLandscape ? 0 : 10,
+          bottom: isLandscape ? 0 : 10,
+          left: 10,
         ),
         titleTextStyle: Theme.of(context).textTheme.titleLarge!.copyWith(
               fontSize: isLandscape ? 16.0 : 20.0,
@@ -79,57 +80,51 @@ class CalendarWidget extends StatelessWidget {
 
           return SizedBox(
             height: isLandscape ? 40.0 : null,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: InkWell(
-                      onTap: () => onHeaderTap?.call(day),
-                      child: Row(
-                        children: [
-                          Text(
-                            title,
-                            style: Theme.of(context)
-                                .textTheme
-                                .titleLarge!
-                                .copyWith(
-                                  fontSize: isLandscape ? 16.0 : 20.0,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                          ),
-                          const SizedBox(width: 4),
-                          Icon(
-                            Icons.arrow_drop_down,
-                            size: isLandscape ? 20.0 : 24.0,
-                            color: Theme.of(context).colorScheme.onSurface,
-                          ),
-                        ],
-                      ),
+            child: Row(
+              children: [
+                Expanded(
+                  child: InkWell(
+                    onTap: () => onHeaderTap?.call(day),
+                    child: Row(
+                      children: [
+                        Text(
+                          title,
+                          style:
+                              Theme.of(context).textTheme.titleLarge!.copyWith(
+                                    fontSize: isLandscape ? 16.0 : 20.0,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                        ),
+                        Icon(
+                          Icons.arrow_drop_down,
+                          size: isLandscape ? 20.0 : 24.0,
+                          color: Theme.of(context).colorScheme.onSurface,
+                        ),
+                      ],
                     ),
                   ),
-                  IconButton(
-                    padding: EdgeInsets.zero,
-                    constraints: const BoxConstraints(),
-                    iconSize: isLandscape ? 20.0 : 24.0,
-                    icon: Icon(
-                      Icons.chevron_left,
-                      color: Theme.of(context).colorScheme.onSurface,
-                    ),
-                    onPressed: () => onPreviousMonth?.call(day),
+                ),
+                IconButton(
+                  padding: EdgeInsets.zero,
+                  constraints: const BoxConstraints(),
+                  iconSize: isLandscape ? 20.0 : 24.0,
+                  icon: Icon(
+                    Icons.chevron_left,
+                    color: Theme.of(context).colorScheme.onSurface,
                   ),
-                  IconButton(
-                    padding: EdgeInsets.zero,
-                    constraints: const BoxConstraints(),
-                    iconSize: isLandscape ? 20.0 : 24.0,
-                    icon: Icon(
-                      Icons.chevron_right,
-                      color: Theme.of(context).colorScheme.onSurface,
-                    ),
-                    onPressed: () => onNextMonth?.call(day),
+                  onPressed: () => onPreviousMonth?.call(day),
+                ),
+                IconButton(
+                  padding: EdgeInsets.zero,
+                  constraints: const BoxConstraints(),
+                  iconSize: isLandscape ? 20.0 : 24.0,
+                  icon: Icon(
+                    Icons.chevron_right,
+                    color: Theme.of(context).colorScheme.onSurface,
                   ),
-                ],
-              ),
+                  onPressed: () => onNextMonth?.call(day),
+                ),
+              ],
             ),
           );
         },
