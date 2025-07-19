@@ -1,0 +1,2 @@
+D:/Development/birthdays_mobile/android/app/.cxx/RelWithDebInfo/484u2971/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/Development/birthdays_mobile/android/app/.cxx/RelWithDebInfo/484u2971/arm64-v8a/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,2 @@
+D:/Development/birthdays_mobile/android/app/.cxx/Debug/466d1i5i/x86_64/CMakeFiles/edit_cache.dir
+D:/Development/birthdays_mobile/android/app/.cxx/Debug/466d1i5i/x86_64/CMakeFiles/rebuild_cache.dir
