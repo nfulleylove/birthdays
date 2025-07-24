@@ -20,7 +20,7 @@ class Birthday {
     remindFourWeeks: false,
   );
 
-  String get name => "$forename $surname";
+  String get name => surname.isEmpty ? forename : "$forename $surname";
   int get age => year - date.year;
 
   String dateTextForGivenYear(int year) {
