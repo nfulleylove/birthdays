@@ -11,7 +11,7 @@ A sleek birthday reminder app, built with Flutter - designed to help you celebra
 
 ## 📱 How It Works
 
-### Reminders
+### 👋🏻 Reminders
 
 > ⚠️ For reminders to work, the app may require you to allow notifications and allow the app permission to set alarms.
 
